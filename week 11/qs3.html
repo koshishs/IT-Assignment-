@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="marks" placeholder="Enter your marks: "><br><br>
+    <input type="submit" name="Submit" id="btn">
+    <script>
+        var submit = document.querySelector("#btn");
+        submit.addEventListener("click", show);
+
+        function show() {
+            var details = "";
+            var marks = document.querySelector("#marks").value;
+            console.log(marks);
+
+            if (marks <= 100 && marks >= 80)
+                details = "Congratulations! You have scored Distinction.";
+            else if (marks < 80 && marks >= 60)
+                details = "Congratulations! You have scored First Division.";
+            else if (marks < 60 && marks >= 50)
+                details = "Congratulations! You have scored Second Division.";
+            else if (marks < 50 && marks >= 40)
+                details = "Congratulations! You have scored Third Division.";
+            else if (marks < 40 && marks >= 0)
+                details = "Sorry, You have failed!";
+            else
+                details = "Please, enter correct value. ";
+
+            alert(details);
+        }
+    </script>
+</body>
+
+</html>

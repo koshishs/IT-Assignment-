@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .images {
+            display: -moz-box;
+            margin: 20px;
+        }
+
+        .indivisual_image {
+            margin: 20px;
+        }
+
+        .para {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">Showing 4 images using loop</h1>
+    <div class="images"></div>
+
+    <script>
+        var image = document.querySelector(".images");
+        for (i = 1; i <= 4; i++) {
+            var img = document.createElement("div");
+            var details = document.createElement("p");
+
+            details.classList.add("para");
+            img.classList.add("indivisual_image");
+            img.innerHTML = "<img src=" + i + ".jpg width=" + 500 + "px >";
+            details.innerHTML = "<h3> Image: " + i + ".jpg </h3>";
+            img.appendChild(details);
+            image.appendChild(img);
+        }
+    </script>
+</body>
+
+</html>
